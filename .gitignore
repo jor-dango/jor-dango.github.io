@@ -1,0 +1,15 @@
+/p*
+/.vscode
+
+
+wip/parallax.min.js
+
+# Ignoring all unused assets for now
+wip/assets/*
+
+!wip/assets/EuropaNuovaRegular.woff
+!wip/assets/THICCCBOI-Medium.woff2
+!wip/assets/THICCCBOI-ExtraBold.woff2
+!wip/assets/mesh70.png
+!wip/assets/pfp1.jpg
+

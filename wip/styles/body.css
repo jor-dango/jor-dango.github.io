@@ -1,0 +1,95 @@
+h1 {
+  font-size: 4rem;
+	font-family: "THICCC", "Lexend", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.3rem;
+	font-family: "EuropaRegular", Arial, Helvetica, sans-serif;
+  font-weight: 350;
+  line-height: 160%;
+}
+
+p {
+  font-size: 1rem;
+	font-family: "EuropaRegular", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  line-height: 160%;
+}
+
+#hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* .parallax-layer {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+} */
+
+#hero-layer-1 {
+  position:absolute;
+  height: 100vh;
+  width: 100%;
+
+  background-image: url("../assets/mesh70.png");
+  background-size: cover;
+  background-position: center;
+  background-color: gray;
+  
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+#hero-layer-2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 2rem;
+	padding-left: 6rem;
+	padding-right: 8rem;
+  gap: 2rem;
+}
+
+#pfp {
+  min-width: 25%;
+  aspect-ratio: 0.8/1;
+  background-color: rgb(204, 204, 204);
+
+  border-top-left-radius: 4.5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 4.5rem;
+  border-bottom-left-radius: 1rem;
+
+  border-width: 0px;
+
+  background-image: url("../assets/pfp1.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#title {
+  text-align: left;
+  max-width: 60%;
+}
+
+#bio {
+  text-align: justify;
+  max-width: 50%;
+}
+
+.subheader {
+  font-size: .5rem;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  text-align: center;
+}

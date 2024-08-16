@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "THICCC";
+  src: url(../assets/THICCCBOI-ExtraBold.woff2);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "THICCC";
+  src: url(../assets/THICCCBOI-Medium.woff2);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "EuropaRegular";
+  src: url(../assets/EuropaNuovaRegular.woff);
+}
