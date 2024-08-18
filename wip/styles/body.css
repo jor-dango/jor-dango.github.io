@@ -1,29 +1,48 @@
 h1 {
-  font-size: 4rem;
+  font-size: clamp(1rem, 3.3vw, 4rem);
 	font-family: "THICCC", "Lexend", Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-weight: var(--font-extrabold);
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: clamp(.8rem, 1.1vw, 1.3rem);
 	font-family: "EuropaRegular", Arial, Helvetica, sans-serif;
-  font-weight: 350;
+  font-weight: var(--font-normal);
   line-height: 160%;
 }
 
 p {
   font-size: 1rem;
 	font-family: "EuropaRegular", Arial, Helvetica, sans-serif;
-  font-weight: normal;
+  font-weight: var(--font-normal);
   line-height: 160%;
 }
 
+a:not(#pfp) {
+  background-position-y: -0%;
+  background-image: linear-gradient(180deg, transparent 50%, black 50%) !important;
+  transition: background-position-y 0.3s;
+  background-size: 2px;
+  background-size: auto 190%;
+  padding: 3px 0;
+  text-decoration: none;
+  color: inherit;
+}
+a:hover:not(#pfp) {
+  background-position-y: 100%;
+  color: white;
+  transition: background-position-y 0.1s;
+}
+
 #hero {
-  height: 100vh;
-  width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+	padding-left: 5vw;
+	padding-right: 10vw;
 }
 
 /* .parallax-layer {
@@ -35,7 +54,7 @@ p {
 } */
 
 #hero-layer-1 {
-  position:absolute;
+  position: absolute;
   height: 100vh;
   width: 100%;
 
@@ -43,25 +62,31 @@ p {
   background-size: cover;
   background-position: center;
   background-color: gray;
+  transition: filter .2s;
   
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
 }
+/* #container:hover #hero-layer-1 {
+  filter:blur(4rem);
+  transition: filter .2s;
+} */
 
 #hero-layer-2 {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
-  padding: 2rem;
-	padding-left: 6rem;
-	padding-right: 8rem;
-  gap: 2rem;
+
+  max-height: 100vh;
+  gap: 12vw;
 }
 
 #pfp {
   min-width: 25%;
+  max-width: 35%;
   aspect-ratio: 0.8/1;
   background-color: rgb(204, 204, 204);
 
@@ -71,6 +96,7 @@ p {
   border-bottom-left-radius: 1rem;
 
   border-width: 0px;
+  flex-grow: 1;
 
   background-image: url("../assets/pfp1.JPG");
   background-size: cover;
@@ -78,18 +104,39 @@ p {
   background-position: center;
 }
 
+.fade-in {
+  transform: translate(0, 2rem);
+  opacity: 0;
+  transition: opacity .6s, transform .5s;
+}
+
 #title {
   text-align: left;
-  max-width: 60%;
 }
 
 #bio {
   text-align: justify;
-  max-width: 50%;
+}
+
+#bio-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+  gap: 2rem;
 }
 
 .subheader {
   font-size: .5rem;
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
   text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  #pfp {
+    display: none;
+  }
 }
