@@ -20,52 +20,52 @@
   <!-- Elements for initial loading sequence -->
   <div id="initBG">
     <div id="loader"></div>
-    <!-- <p id="loadingText">Loading the site...</p> -->
   </div>
-  <div class="initCircle" id="circle1"></div>
-  <div class="initCircle" id="circle2"></div>
-  <div class="initCircle" id="circle3"></div>
+  <!-- BG -->
+  <div id="bg"></div>
+  
 
-  <div id="container">
-
-    <!-- Hero section -->
-    <div id="hero" style="background-color: antiquewhite;">
-      <div class="parallax-layer" id="hero-layer-1" data-depth="0.2"></div>
-      <div class="parallax-layer" id="hero-layer-2">
-        <div id="bio-container">
-          <h1 class="fade-in" id="title">
-            👋 Hi, I'm Jordan!
-            <span style="font-weight: var(--font-semibold); ">
-              I’m an aspiring software developer with a passion for UI/UX design.
-            </span>
-          </h1>
-          <h2 class="fade-in" id="bio">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur.
-          </h2>
-        </div>
-        <a class="fade-in" id="pfp" href="https://www.linkedin.com/in/jordan-e-tan/" target="_blank" rel="noopener noreferrer"></a>
+  <!-- Hero section -->
+  <section id="hero">
+    <div class="parallax-layer" id="hero-layer-1" data-depth="0.2"></div>
+    <div class="parallax-layer" id="hero-layer-2">
+      <div id="bio-container">
+        <h1 class="fade-in" id="title">
+          <!-- 👋 Hi, I'm Jordan! -->
+          <span style="font-weight: var(--font-semibold); ">
+            <!-- I’m an aspiring software developer with a passion for UI/UX design. -->
+          </span>
+        </h1>
+        <h2 class="fade-in" id="bio">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur.
+        </h2>
       </div>
-      <a id="worklink" style="display: flex; flex-direction: row; align-items: center; max-width:fit-content;" href="/wip/hero.html">
-        <!-- div used to wrap since without it, the anchor duplicates itself?? -->
-        <div>
-          <h2 style="font-weight: var(--font-semibold); display: flex; flex-direction: row; align-items: center;">Check out my work! &nbsp
-            <svg style="background-color:rgba(255,255,255,0);" width="clamp(1.2rem, 1.25vw, 1.5rem)" viewBox="0 0 24 24" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M15.0002 15.0001V9.00005M15.0002 9.00005H9.00019M15.0002 9.00005L9.00019 14.9999M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          <h2>
-        </div>
-      </a>
+      <!-- <a class="fade-in pfp"></a> -->
+      <!-- <a class="pfp" href="https://www.linkedin.com/in/jordan-e-tan/" target="_blank" rel="noopener noreferrer"></a> -->
+      <a class="fade-in pfp"></a>
     </div>
+    <a id="worklink" style="display: flex; flex-direction: row; align-items: center; max-width:fit-content;" onclick="goto_work">
+      <!-- div used to wrap since without it, the anchor duplicates itself?? -->
+      <div>
+        <h2 style="font-weight: var(--font-semibold); display: flex; flex-direction: row; align-items: center;">Check out my work! &nbsp
+          <svg style="background-color:rgba(255,255,255,0);" width="clamp(1.2rem, 1.25vw, 1.5rem)" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.0002 15.0001V9.00005M15.0002 9.00005H9.00019M15.0002 9.00005L9.00019 14.9999M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </h2>
+      </div>
+    </a>
+  </section>
 
 
-
-  </div>
+  <section id="projects">
+    
+  </section>
 
   <!-- <p id="a" class="bepe">
     DineOutBuddy
