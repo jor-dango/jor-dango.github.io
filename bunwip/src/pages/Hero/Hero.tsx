@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import fontWeights from '../../components/constants'
-import { sleep, fade_in, fade_out } from '../../components/helperFuncs'
+import fontWeights from '../../utils/constants'
+import { sleep, fade_in, fade_out } from '../../utils/helperFuncs'
 
-import '../../components/fonts.css'
-import '../../components/init.css'
+import '../../utils/fonts.css'
+import '../../utils/init.css'
 import './hero.css'
 
 function Hero() {
@@ -15,7 +15,7 @@ function Hero() {
   const navigate = useNavigate();
 
   useEffect(() => { // This function loads in the hero section when the page loads
-    let delay_ms = -10;
+    let delay_ms = -10000;
 
     delay_ms += 400;
     sleep(delay_ms).then(() => {
@@ -82,7 +82,7 @@ function Hero() {
           <a className="fade-in pfp" href="https://www.linkedin.com/in/jordan-e-tan/" target="_blank" rel="noopener noreferrer"></a>
           {/* <a className="fade-in pfp"></a> */}
         </div>
-        <a id="worklink" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', maxWidth: 'fit-content' }} href="#" onClick={goto_projects}>
+        <a className='fade-in' style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', maxWidth: 'fit-content' }} href="#" onClick={goto_projects}>
           {/* div used to wrap since without it, the anchor duplicates itself?? */}
           <div>
             <h2 style={{ fontWeight: fontWeights.semibold, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Check out my work!&nbsp;

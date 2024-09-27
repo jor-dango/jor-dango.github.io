@@ -1,0 +1,46 @@
+.card {
+    display: flex;
+    flex: 1 0 40%;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 2rem;
+
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); 
+
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 25vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    border-radius: 20px;
+    background-color: #d2d2d2;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .card-description {
+    margin-top: 10px;
+    color: #777;
+  }

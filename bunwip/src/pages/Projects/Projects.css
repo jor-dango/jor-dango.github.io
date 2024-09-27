@@ -1,0 +1,34 @@
+#projects {
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+
+    padding: 5vw;
+
+    /* background-color: antiquewhite; */
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#title_proj, #bio_proj {
+    text-align: end;
+}
+
+#project-container {
+    width: 100%;
+    /* background-color: red; */
+    /* height: 100%; */
+    /* overflow-y: scroll; */
+    /* overflow: hidden; */
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 5rem;
+}
