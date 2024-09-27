@@ -1,67 +1,74 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import fontWeights from '../../components/constants'
-import './fonts.css'
-import './init.css'
-import './body.css'
+import { sleep, fade_in, fade_out } from '../../components/helperFuncs'
+
+import '../../components/fonts.css'
+import '../../components/init.css'
+import './hero.css'
 
 function Hero() {
-  async function sleep(ms: number) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+  const loaderRef = useRef<HTMLDivElement>(null);
+  const initBGRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLDivElement>(null);
 
-  function init() {
+  const navigate = useNavigate();
 
-    let delay_ms = -10000;
+  useEffect(() => { // This function loads in the hero section when the page loads
+    let delay_ms = -10;
 
-    delay_ms += 800;
+    delay_ms += 400;
     sleep(delay_ms).then(() => {
-      document.getElementById("loader").style.opacity = 0.0;
+      loaderRef.current!.style.opacity = '0';
     })
 
     // Minimize the BG div for a smooth reveal animation
     delay_ms += 700;
     sleep(delay_ms).then(() => {
-      document.getElementById("initBG").style.width = "0px";
-      document.getElementById("initBG").style.backgroundColor = "rgba(255, 255, 255, 0)";
+      initBGRef.current!.style.width = "0px";
+      initBGRef.current!.style.backgroundColor = "rgba(255, 255, 255, 0)";
     })
 
     // Reveal the page
     delay_ms += 50;
     sleep(delay_ms).then(() => {
-      document.getElementById("initBG").style.transition = "width .8s";
-      document.getElementById("initBG").style.width = "250vh";
+      initBGRef.current!.style.transition = "width .8s";
+      initBGRef.current!.style.width = "250vh";
     });
 
     // Reveal initial elements
     delay_ms += 100;
-    sleep(delay_ms).then(() => { fade_in("hero") });
+    sleep(delay_ms).then(() => { fade_in(heroRef) });
 
     // Hide initial loading screen to make the page clickable after the animation ends
     delay_ms += 650;
     sleep(delay_ms).then(() => {
-      document.getElementById("initBG").style.display = "none";
-      document.getElementById("pfp").classList.remove("fade-in");
+      initBGRef.current!.style.display = "none";
+      // document.getElementById("pfp").classList.remove("fade-in");
     });
-  }
+  }, [])
 
-  function goto_work() {
-
+  function goto_projects() {
+    fade_out(heroRef);
+    sleep(600).then(() => {
+      navigate("/projects");
+    })
   }
 
   return (
-    <div onLoad={init}>
-      <div id="initBG">
-        <div id="loader"></div>
+    <div>
+      <div id="initBG" ref={initBGRef}>
+        <div id="loader" ref={loaderRef}></div>
       </div>
 
-      <section id="hero">
+      <section id="hero" ref={heroRef}>
         <div className="parallax-layer" id="hero-layer-1" data-depth="0.2"></div>
         <div className="parallax-layer" id="hero-layer-2">
           <div id="bio-container">
             <h1 className="fade-in" id="title">
-              {/* 👋 Hi, I'm Jordan! */}
+              👋 Hi, I'm Jordan!&nbsp;
               <span style={{ fontWeight: fontWeights.semibold }}>
-                {/* I’m an aspiring software developer with a passion for UI/UX design. */}
+                I’m an aspiring software developer with a passion for UI/UX design.
               </span>
             </h1>
             <h2 className="fade-in" id="bio">
@@ -72,13 +79,13 @@ function Hero() {
             </h2>
           </div>
           {/* <a className="fade-in pfp"></a> */}
-          {/* <a className="pfp" href="https://www.linkedin.com/in/jordan-e-tan/" target="_blank" rel="noopener noreferrer"></a> */}
-          <a className="fade-in pfp"></a>
+          <a className="fade-in pfp" href="https://www.linkedin.com/in/jordan-e-tan/" target="_blank" rel="noopener noreferrer"></a>
+          {/* <a className="fade-in pfp"></a> */}
         </div>
-        <a id="worklink" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', maxWidth: 'fit-content' }} onClick={goto_work}>
+        <a id="worklink" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', maxWidth: 'fit-content' }} href="#" onClick={goto_projects}>
           {/* div used to wrap since without it, the anchor duplicates itself?? */}
           <div>
-            <h2 style={{ fontWeight: fontWeights.semibold, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Check out my work! &nbsp
+            <h2 style={{ fontWeight: fontWeights.semibold, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Check out my work!&nbsp;
               <svg style={{ backgroundColor: "rgba(255,255,255,0)", width: "clamp(1.2rem, 1.25vw, 1.5rem)" }} viewBox="0 0 24 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -94,7 +101,3 @@ function Hero() {
 }
 
 export default Hero
-
-const styles = {
-
-}
