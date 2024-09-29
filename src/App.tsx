@@ -1,5 +1,5 @@
-import React from 'react'
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
+// import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import bg from './assets/mesh70.png'
 
 import Hero from './pages/Hero/Hero'
@@ -9,10 +9,10 @@ function App() {
   document.body.style.backgroundImage = `url(${bg})`;
   // const navigate = useNavigate();
 
-  function go_home() {
-    const navigate = useNavigate();
-    navigate("/")
-  }
+  // function go_home() {
+  //   const navigate = useNavigate();
+  //   navigate("/")
+  // }
 
   return (
     <div>

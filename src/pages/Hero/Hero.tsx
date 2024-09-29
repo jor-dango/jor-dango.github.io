@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import fontWeights from '../../utils/constants'
 import { sleep, fade_in, fade_out } from '../../utils/helperFuncs'
@@ -15,7 +15,7 @@ function Hero() {
   const navigate = useNavigate();
 
   useEffect(() => { // This function loads in the hero section when the page loads
-    let delay_ms = -10000;
+    let delay_ms = 0;
 
     delay_ms += 400;
     sleep(delay_ms).then(() => {
