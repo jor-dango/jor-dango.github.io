@@ -1,8 +1,8 @@
-import React from "react";
-import image from '../assets/pfp1.jpg'
-import './projectCard.css'
+// import React from "react";
+// import image from '../assets/pfp1.jpg'
+import './ProjectCard.css'
 
-import bg from '../assets/mesh70.png'
+// import bg from '../assets/mesh70.png'
 
 function ProjectCard(props: {title: string, img: string, tech: string, desc: string}) {
 	return (

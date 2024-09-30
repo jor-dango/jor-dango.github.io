@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { sleep, fade_in, fade_out } from '../../utils/helperFuncs'
 import ProjectCard from '../../components/ProjectCard';
 import fontWeights from '../../utils/constants';
