@@ -23,20 +23,20 @@ function Projects() {
     })
   }
 
-  const projects = {
-    dineoutbuddy: {
+  const proj = {
+    dineout: {
       title: 'DineOutBuddy',
       tech: 'React Native, Node.js, MongoDB, Express.js',
       img: DineOutBuddyImg,
       desc: 'Utilized the MERN techstack to create a responsive mobile app to allow users to quickly find where to eat by generating custom food recommendations based on 20+ possible allergens and preferences.'
     },
-    raccooneyes: {
+    raccoon: {
       title: 'Raccoon Eyes',
       tech: 'React.js, Tailwind, Next.js, Chart.js',
       img: DineOutBuddyImg,
       desc: 'Re-designed the main dashboard using React, Next.js, and Tailwind to allow for much faster at-a-glance comprehension for analyzing student eating patterns at university dining halls in order to help minimize food waste, increase sustainability, and improve overall student satisfaction.'
     },
-    hackutd: {
+    hack: {
       title: 'HackUTD',
       tech: 'React Native, Node.js, MongoDB, Express.js',
       img: DineOutBuddyImg,
@@ -46,8 +46,7 @@ function Projects() {
 
   return (
     <section ref={projectsRef} id="projects">
-      <header id="intro">
-
+      <header>
         <a className='fade-in' style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', maxWidth: 'fit-content' }} href="#" onClick={goto_projects}>
           {/* div used to wrap since without it, the anchor duplicates itself?? */}
           <div>
@@ -70,10 +69,10 @@ function Projects() {
       </header>
 
       <div id="project-container">
-        <ProjectCard title={projects.dineoutbuddy.title} img={projects.dineoutbuddy.img} tech={projects.dineoutbuddy.tech} desc={projects.dineoutbuddy.desc} />
-        <ProjectCard title={projects.raccooneyes.title} img={""} tech={projects.raccooneyes.tech} desc={projects.raccooneyes.desc} />
-        <ProjectCard title={projects.hackutd.title} img={""} tech={projects.hackutd.tech} desc={projects.hackutd.desc} />
-        <ProjectCard title={projects.dineoutbuddy.title} img={""} tech={projects.dineoutbuddy.tech} desc={projects.dineoutbuddy.desc} />
+        <ProjectCard project={proj.dineout} />
+        <ProjectCard project={proj.raccoon} />
+        <ProjectCard project={proj.hack} />
+        <ProjectCard project={proj.dineout} />
       </div>
     </section>
   )

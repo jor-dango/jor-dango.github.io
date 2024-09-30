@@ -5,15 +5,10 @@
     /* justify-content: center; */
     flex-direction: column;
 
-    padding: 5vw;
+    padding: 5rem;
+    gap: 5rem;
 
     /* background-color: antiquewhite; */
-}
-
-#intro {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
 }
 
 #title_proj, #bio_proj {

@@ -7,7 +7,6 @@
 
 	padding-left: 5vw;
 	padding-right: 10vw;
-
   /* background-color: antiquewhite; */
 }
 
@@ -47,6 +46,7 @@
   max-height: 100vh;
   gap: 12vw;
   
+  margin-bottom: 2rem;
   /* z-index: 1; */
 }
 
@@ -149,10 +149,12 @@
 
 
 
-@media screen and (max-width: 600px) {
-  /* .pfp {
-    display: none;
-  } */
+@media screen and (max-width: 800px) {
+  .pfp {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-position: bottom;
+  }
   #hero-layer-2 {
     flex-direction: column-reverse;
   }

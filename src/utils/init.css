@@ -3,23 +3,26 @@
 	/* z-index: 0; */
 	/* box-sizing: border-box; */
 
-	/* border-width: 2px;
-	border-color: red;
-	border-style: dashed; */
+	/* outline: black solid 1px;
+	background-color: rgba(255, 0, 0, 0.1); */
 }
+/* *:nth-child(2n) {
+	background-color: rgba(255,0,0,.1);
+} */
 
 body {
   color: rgb(34, 34, 34);
 }
 
 h1 {
-  font-size: clamp(1rem, 3.3vw, 4rem);
+	line-height: 1.1;
+  font-size: clamp(2rem, 3.3vw, 4rem);
 	font-family: "THICCC", "Lexend", Arial, Helvetica, sans-serif;
   font-weight: var(--font-extrabold);
 }
 
 h2 {
-  font-size: clamp(.8rem, 1.1vw, 1.3rem);
+  font-size: clamp(1rem, 1.1vw, 1.3rem);
 	font-family: "EuropaRegular", Arial, Helvetica, sans-serif;
   font-weight: var(--font-normal);
   line-height: 160%;

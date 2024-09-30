@@ -66,16 +66,10 @@ function Hero() {
         <div className="parallax-layer" id="hero-layer-2">
           <div id="bio-container">
             <h1 className="fade-in" id="title">
-              👋 Hi, I'm Jordan!&nbsp;
-              <span style={{ fontWeight: fontWeights.semibold }}>
-                I’m an aspiring software developer with a passion for UI/UX design.
-              </span>
+              👋 Hi, I'm Jordan! I’m an aspiring software developer with a passion for UI/UX design.
             </h1>
             <h2 className="fade-in" id="bio">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              Welcome to my personal website! I'm a current junior at the University of Texas at Dallas (UTD) studying computer science. I've always had a passion for problem solving, so I'm glad to have found an outlet in software engineering and fullstack development. Click the link below to see some of my work!
             </h2>
           </div>
           {/* <a className="fade-in pfp"></a> */}
