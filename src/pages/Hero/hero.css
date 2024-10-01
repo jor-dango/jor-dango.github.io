@@ -159,7 +159,21 @@
     flex-direction: column-reverse;
   }
 }
-
+@media screen and (max-height: 900px) {
+  /* #hero-layer-2 {
+    margin-bottom: 5vh;
+    outline: red solid 1px;
+  } */
+  #hero {
+    justify-content: center;
+    padding-top: 5vh;
+  }
+}
+@media screen and (max-height: 740px) {
+  .pfp {
+    display: none;
+  }  
+}
 #element { 
   position: relative;  /* optional */
   width: 100px;

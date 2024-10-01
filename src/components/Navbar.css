@@ -1,0 +1,30 @@
+#navbar-container {
+	position: absolute;
+	width: 100vw;
+	/* background-color: red; */
+	height: 4rem;
+	z-index: 100;
+}
+
+#navbar {
+	height: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding-left: 5vw;
+	padding-right: 10vw;
+}
+
+#hero-link {
+	font-family: "THICCC", "Lexend", Arial, Helvetica, sans-serif;
+	font-weight: var(--font-semibold);
+	font-size: clamp(1rem, 1.1vw, 1.3rem);
+}
+
+.other-link {
+	font-family: "EuropaRegular", Arial, Helvetica, sans-serif;
+	font-weight: var(--font-normal);
+	font-size: clamp(.8rem, 1vw, 1.1rem);
+}

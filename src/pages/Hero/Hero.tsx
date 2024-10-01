@@ -5,7 +5,7 @@ import { sleep, fade_in, fade_out } from '../../utils/helperFuncs'
 
 import '../../utils/fonts.css'
 import '../../utils/init.css'
-import './hero.css'
+import './Hero.css'
 
 function Hero() {
   const loaderRef = useRef<HTMLDivElement>(null);
@@ -14,6 +14,13 @@ function Hero() {
 
   const navigate = useNavigate();
 
+  // const [hasVisited, setHasVisited] = useState(false);
+
+  // if (hasVisited === true) {
+  //   initBGRef.current!.style.display = "none";
+  //   fade_in(heroRef);
+  // }
+  // else {
   useEffect(() => { // This function loads in the hero section when the page loads
     let delay_ms = 0;
 
@@ -46,7 +53,10 @@ function Hero() {
       initBGRef.current!.style.display = "none";
       // document.getElementById("pfp").classList.remove("fade-in");
     });
+
+    // setHasVisited(true);
   }, [])
+  // }
 
   function goto_projects() {
     fade_out(heroRef);
@@ -76,7 +86,7 @@ function Hero() {
           <a className="fade-in pfp" href="https://www.linkedin.com/in/jordan-e-tan/" target="_blank" rel="noopener noreferrer"></a>
           {/* <a className="fade-in pfp"></a> */}
         </div>
-        <a className='fade-in' style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', maxWidth: 'fit-content' }} href="#" onClick={goto_projects}>
+        <a className='fade-in body-link' style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', maxWidth: 'fit-content' }} href="#" onClick={goto_projects}>
           {/* div used to wrap since without it, the anchor duplicates itself?? */}
           <div>
             <h2 style={{ fontWeight: fontWeights.semibold, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Check out my work!&nbsp;

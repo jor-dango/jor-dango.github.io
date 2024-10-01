@@ -1,27 +1,17 @@
 import { useEffect, useRef } from 'react'
-import { sleep, fade_in, fade_out } from '../../utils/helperFuncs'
+import { fade_in } from '../../utils/helperFuncs'
 import ProjectCard from '../../components/ProjectCard';
-import fontWeights from '../../utils/constants';
 import './Projects.css'
-import { useNavigate } from 'react-router-dom';
 
 import DineOutBuddyImg from '../../assets/DineOutBuddyMockup.png'
 
 function Projects() {
 
   const projectsRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
     fade_in(projectsRef);
   }, [])
-
-  function goto_projects() {
-    fade_out(projectsRef);
-    sleep(600).then(() => {
-      navigate("/");
-    })
-  }
 
   const proj = {
     dineout: {
@@ -46,27 +36,6 @@ function Projects() {
 
   return (
     <section ref={projectsRef} id="projects">
-      <header>
-        <a className='fade-in' style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', maxWidth: 'fit-content' }} href="#" onClick={goto_projects}>
-          {/* div used to wrap since without it, the anchor duplicates itself?? */}
-          <div>
-            <h2 style={{ fontWeight: fontWeights.semibold, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-              <svg style={{ backgroundColor: "rgba(255,255,255,0)", width: "clamp(1.2rem, 1.25vw, 1.5rem)" }} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.00019 15.0001V9.00005M9.00019 9.00005H15.0002M9.00019 9.00005L15.0002 14.9999M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              &nbsp;Go back</h2>
-          </div>
-        </a>
-        {/* This div is just to make the whole thing wide enough I'm in pain */}
-        <div style={{ height: '1px' }}>
-          <h2 style={{ opacity: '0' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur.
-          </h2>
-        </div>
-      </header>
 
       <div id="project-container">
         <ProjectCard project={proj.dineout} />
