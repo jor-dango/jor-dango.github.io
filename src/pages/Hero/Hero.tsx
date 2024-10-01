@@ -5,7 +5,7 @@ import { sleep, fade_in, fade_out } from '../../utils/helperFuncs'
 
 import '../../utils/fonts.css'
 import '../../utils/init.css'
-import './Hero.css'
+import './hero.css'
 
 function Hero() {
   const loaderRef = useRef<HTMLDivElement>(null);
