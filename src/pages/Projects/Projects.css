@@ -1,5 +1,6 @@
-#projects {
+#projects-container {
     height: 100vh;
+    max-height: 100%;
     max-width: 100%;
     display: flex;
     /* justify-content: center; */
@@ -8,7 +9,7 @@
     padding: 5rem;
     padding-top: 8rem;
     gap: 5rem;
-
+    
     /* background-color: antiquewhite; */
 }
 
@@ -16,15 +17,24 @@
     text-align: end;
 }
 
-#project-container {
-    width: 100%;
+#projects {
+    max-width: 100%;
     /* background-color: red; */
-    /* height: 100%; */
+    height: 100%;
     /* overflow-y: scroll; */
     /* overflow: hidden; */
 
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 
     gap: 5rem;
+}
+
+#transition-cover {
+    position: absolute;
+    height: 100vh;
+    max-height: 100%;
+    max-width: 100%;
+    background-color: red;
 }

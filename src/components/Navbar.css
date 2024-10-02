@@ -19,7 +19,7 @@
 
 #hero-link {
 	font-family: "THICCC", "Lexend", Arial, Helvetica, sans-serif;
-	font-weight: var(--font-semibold);
+	font-weight: var(--font-extrabold);
 	font-size: clamp(1rem, 1.1vw, 1.3rem);
 }
 

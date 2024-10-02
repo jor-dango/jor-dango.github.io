@@ -28,10 +28,10 @@ function Navbar() {
 				</a>
 				<div style={{display: 'flex', gap: '2rem'}}>
 					<a href="#" onClick={goto_projects}>
-						<p className="other-link body-link">Projects</p>
+						<p className="other-link">Projects</p>
 					</a>
 					<a href="#" onClick={goto_resume}>
-						<p className="other-link body-link">Resume</p>
+						<p className="other-link">Resume</p>
 					</a>
 				</div>
 			</div>

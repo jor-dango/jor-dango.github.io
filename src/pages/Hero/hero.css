@@ -169,7 +169,7 @@
     padding-top: 5vh;
   }
 }
-@media screen and (max-height: 740px) {
+@media screen and (max-height: 740px) and (max-width: 800px) {
   .pfp {
     display: none;
   }  
