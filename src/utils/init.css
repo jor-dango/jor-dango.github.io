@@ -7,33 +7,40 @@
 	/* outline: black solid 1px;
 	background-color: rgba(255, 0, 0, 0.1); */
 }
+
 /* *:nth-child(2n) {
 	background-color: rgba(255,0,0,.1);
 } */
 
 body {
-  color: rgb(34, 34, 34);
+	color: rgb(34, 34, 34);
 }
 
 h1 {
 	line-height: 1.1;
-  font-size: clamp(2rem, 3.3vw, 4rem);
+	font-size: clamp(2rem, 3.3vw, 4rem);
 	font-family: "THICCC", "Lexend", Arial, Helvetica, sans-serif;
-  font-weight: var(--font-extrabold);
+	font-weight: var(--font-extrabold);
 }
 
 h2 {
-  font-size: clamp(1rem, 1.1vw, 1.3rem);
+	font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+	font-family: "THICCC", "Lexend", Arial, Helvetica, sans-serif;
+	font-weight: var(--font-semibold);
+}
+
+h3 {
+	font-size: clamp(1rem, 1.1vw, 1.3rem);
 	font-family: "EuropaRegular", Arial, Helvetica, sans-serif;
-  font-weight: var(--font-normal);
-  line-height: 160%;
+	font-weight: var(--font-normal);
+	line-height: 160%;
 }
 
 p {
-  font-size: 1rem;
+	font-size: 1rem;
 	font-family: "EuropaRegular", Arial, Helvetica, sans-serif;
-  font-weight: var(--font-normal);
-  line-height: 160%;
+	font-weight: var(--font-normal);
+	line-height: 160%;
 }
 
 a {
@@ -42,19 +49,20 @@ a {
 }
 
 .body-link:not(.pfp) {
-  background-position-y: -0%;
-  background-image: linear-gradient(180deg, transparent 50%, black 50%);
-  transition: background-position-y 0.3s;
-  background-size: 2px;
-  background-size: auto 190%;
-  padding: 3px 0;
-  text-decoration: none;
-  color: inherit;
+	background-position-y: -0%;
+	background-image: linear-gradient(180deg, transparent 50%, black 50%);
+	transition: background-position-y 0.3s;
+	background-size: 2px;
+	background-size: auto 190%;
+	padding: 3px 0;
+	text-decoration: none;
+	color: inherit;
 }
+
 .body-link:hover:not(.pfp) {
-  background-position-y: 100%;
-  color: white;
-  transition: background-position-y 0.1s;
+	background-position-y: 100%;
+	color: white;
+	transition: background-position-y 0.1s;
 }
 
 #initBG {
@@ -91,6 +99,7 @@ a {
 	position: relative;
 	transition: opacity .2s;
 }
+
 #loader:before,
 #loader:after {
 	content: "";
@@ -99,20 +108,48 @@ a {
 	background-color: white;
 	animation: l5 2s infinite;
 }
+
 #loader:after {
 	animation-delay: -1s;
 }
-@keyframes l5{
-	0%    {inset:0    1.3rem 1.3rem 0   }
-	12.5% {inset:0    1.3rem 0    0   }
-	25%   {inset:1.3rem 1.3rem 0    0   }
-	37.5% {inset:1.3rem 0    0    0   }
-	50%   {inset:1.3rem 0    0    1.3rem}
-	62.5% {inset:0    0    0    1.3rem}
-	75%   {inset:0    0    1.3rem 1.3rem}
-	87.5% {inset:0    0    1.3rem 0   }
-	100%  {inset:0    1.3rem 1.3rem 0   }
-  }
+
+@keyframes l5 {
+	0% {
+		inset: 0 1.3rem 1.3rem 0
+	}
+
+	12.5% {
+		inset: 0 1.3rem 0 0
+	}
+
+	25% {
+		inset: 1.3rem 1.3rem 0 0
+	}
+
+	37.5% {
+		inset: 1.3rem 0 0 0
+	}
+
+	50% {
+		inset: 1.3rem 0 0 1.3rem
+	}
+
+	62.5% {
+		inset: 0 0 0 1.3rem
+	}
+
+	75% {
+		inset: 0 0 1.3rem 1.3rem
+	}
+
+	87.5% {
+		inset: 0 0 1.3rem 0
+	}
+
+	100% {
+		inset: 0 1.3rem 1.3rem 0
+	}
+}
 
 #loadingText {
 	text-align: center;

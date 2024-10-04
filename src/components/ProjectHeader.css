@@ -1,0 +1,38 @@
+#project-header {
+	display: flex;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	align-items: center;
+	justify-content:space-evenly;
+
+	background-color: rgb(235, 239, 241);
+}
+
+#project-header-text {
+	display: flex;
+	flex-direction: column;
+	justify-content:end;
+	gap: 1rem;
+}
+
+#project-header-img-container {
+	max-width: 25%;
+	filter: drop-shadow(0 0 1.5rem rgb(205, 205, 205));
+}
+
+#project-header-img {
+	border-radius: 2rem;
+	overflow: hidden;
+	max-width: 100%;
+	aspect-ratio: 1/1;
+}
+
+@media screen and (max-width: 800px) {
+  .project-header {
+    flex-direction: column;
+		gap: 3rem;
+  }
+	.project-header-img {
+		max-width: 50%;
+	}
+}

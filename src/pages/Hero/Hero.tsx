@@ -78,9 +78,9 @@ function Hero() {
             <h1 className="fade-in" id="title">
               👋 Hi, I'm Jordan! I’m an aspiring software developer with a passion for UI/UX design.
             </h1>
-            <h2 className="fade-in" id="bio">
+            <h3 className="fade-in" id="bio">
               Welcome to my personal website! I'm a current junior at the University of Texas at Dallas (UTD) studying computer science. I've always had a passion for problem solving, so I'm glad to have found an outlet in software engineering and fullstack development. Click the link below to see some of my work!
-            </h2>
+            </h3>
           </div>
           {/* <a className="fade-in pfp"></a> */}
           <a className="fade-in pfp" href="https://www.linkedin.com/in/jordan-e-tan/" target="_blank" rel="noopener noreferrer"></a>
@@ -89,14 +89,14 @@ function Hero() {
         <a className='fade-in body-link' style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', maxWidth: 'fit-content' }} href="#" onClick={goto_projects}>
           {/* div used to wrap since without it, the anchor duplicates itself?? */}
           <div>
-            <h2 style={{ fontWeight: fontWeights.semibold, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Check out my work!&nbsp;
+            <h3 style={{ fontWeight: fontWeights.semibold, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Check out my work!&nbsp;
               <svg style={{ backgroundColor: "rgba(255,255,255,0)", width: "clamp(1.2rem, 1.25vw, 1.5rem)" }} viewBox="0 0 24 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M15.0002 15.0001V9.00005M15.0002 9.00005H9.00019M15.0002 9.00005L9.00019 14.9999M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-            </h2>
+            </h3>
           </div>
         </a>
       </section>

@@ -1,4 +1,6 @@
 :root {
+  --font-thin: 200;
+  --font-light: 300;
   --font-normal: 400;
   --font-medium: 500;
   --font-semibold: 600;
@@ -9,15 +11,45 @@
 
 @font-face {
   font-family: "THICCC";
+  src: url(../assets/THICCCBOI-Black.woff2);
+  font-weight: 900;
+}
+@font-face {
+  font-family: "THICCC";
   src: url(../assets/THICCCBOI-ExtraBold.woff2);
   font-weight: 800;
 }
-
+@font-face {
+  font-family: "THICCC";
+  src: url(../assets/THICCCBOI-Bold.woff2);
+  font-weight: 700;
+}
 @font-face {
   font-family: "THICCC";
   src: url(../assets/THICCCBOI-SemiBold.woff2);
   font-weight: 600;
 }
+@font-face {
+  font-family: "THICCC";
+  src: url(../assets/THICCCBOI-Medium.woff2);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "THICCC";
+  src: url(../assets/THICCCBOI-Normal.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "THICCC";
+  src: url(../assets/THICCCBOI-Light.woff2);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "THICCC";
+  src: url(../assets/THICCCBOI-Thin.woff2);
+  font-weight: 200;
+}
+
 
 @font-face {
   font-family: "EuropaRegular";
