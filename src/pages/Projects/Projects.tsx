@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import { fade_in, fade_out, sleep } from '../../utils/helperFuncs'
 import ProjectCard from '../../components/ProjectCard';
+import { useNavigate } from 'react-router-dom';
 import './Projects.css'
 
-import DineOutBuddyImg from '../../assets/DineOutBuddyMockup.png'
-import { useNavigate } from 'react-router-dom';
-// import DineOutBuddy from '../DineOutBuddy/DineOutBuddy';
+import DOBImg from '../../assets/DineOutBuddyMockup.png'
+import REImg from '../../assets/RaccoonEyesMockup.png'
+import HackImg from '../../assets/HackUTDMockup.png'
 
 function Projects() {
 
@@ -38,23 +39,33 @@ function Projects() {
     dineout: {
       title: 'DineOutBuddy',
       tech: 'React Native, Node.js, MongoDB, Express.js',
-      img: DineOutBuddyImg,
+      img: DOBImg,
       desc: 'Utilized the MERN techstack to create a responsive mobile app to allow users to quickly find where to eat by generating custom food recommendations based on 20+ possible allergens and preferences.',
-      ref: 'dineoutbuddy'
+      // ref: 'dineoutbuddy'
+      ref: 'https://github.com/acm-projects/DineOutBuddy/'
     },
     raccoon: {
       title: 'Raccoon Eyes',
       tech: 'React.js, Tailwind, Next.js, Chart.js',
-      img: DineOutBuddyImg,
+      img: REImg,
       desc: 'Re-designed the main dashboard using React, Next.js, and Tailwind to allow for much faster at-a-glance comprehension for analyzing student eating patterns at university dining halls in order to help minimize food waste, increase sustainability, and improve overall student satisfaction.',
-      ref: 'RaccoonEyes'
+      // ref: 'RaccoonEyes'
+      ref: 'https://raccooneyesai.com/'
     },
     hack: {
       title: 'HackUTD',
       tech: 'React Native, Node.js, MongoDB, Express.js',
-      img: DineOutBuddyImg,
+      img: HackImg,
       desc: 'Coordinated with team members to update the yearly HackUTD website and create new product designs for each year\'s hackathon, hosting over 1,000 hackers and amassing 2,500+ applicants. Also co-developed a set of branding guidelines every year to facilitate all the previously mentioned activities, as well as our social media presence.',
-      ref: 'HackUTD'
+      // ref: 'HackUTD'
+      ref: 'https://ripple.hackutd.co/'
+    },
+    comingsoon: {
+      title: 'More coming soon!',
+      tech: '',
+      img: '',
+      desc: 'More projects are in the works and will be put up on display on this site once they are finished!\n\n\n\n',
+      ref: '#'
     }
   }
 
@@ -66,7 +77,7 @@ function Projects() {
           <ProjectCard project={proj.dineout} navFunction={setPageNav} />
           <ProjectCard project={proj.raccoon} navFunction={setPageNav} />
           <ProjectCard project={proj.hack} navFunction={setPageNav} />
-          <ProjectCard project={proj.dineout} navFunction={setPageNav} />
+          <ProjectCard project={proj.comingsoon} navFunction={setPageNav} />
         </div>
       </section>
     </div>

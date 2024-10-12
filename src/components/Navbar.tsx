@@ -3,6 +3,7 @@ import './../utils/init.css'
 // import fontWeights from '../utils/constants'
 import { useNavigate } from 'react-router-dom'
 import { useRef } from 'react';
+import resume from '../assets/Jordan Tan Resume.pdf'
 
 function Navbar() {
 
@@ -15,10 +16,6 @@ function Navbar() {
 	function goto_projects() {
 		navigate("/projects");
 	}
-	function goto_resume() {
-		// navRef.current!.style.display = 'none';
-		navigate("/resume");
-	}
 	
 	return (
 		<div id="navbar-container" ref={navRef}>
@@ -30,7 +27,7 @@ function Navbar() {
 					<a href="#" onClick={goto_projects}>
 						<p className="other-link">Projects</p>
 					</a>
-					<a href="#" onClick={goto_resume}>
+					<a href={resume} target="_blank">
 						<p className="other-link">Resume</p>
 					</a>
 				</div>

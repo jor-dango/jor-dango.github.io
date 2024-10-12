@@ -3,7 +3,7 @@ import './DineOutBuddy.css'
 import { fade_in } from '../../utils/helperFuncs';
 import DineOutBuddyImg from '../../assets/DineOutBuddyMockup.png'
 import ProjectHeader from '../../components/ProjectHeader';
-import fontWeights from '../../utils/constants';
+// import fontWeights from '../../utils/constants';
 
 function DineOutBuddy() {
 

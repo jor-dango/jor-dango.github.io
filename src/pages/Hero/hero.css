@@ -174,20 +174,3 @@
     display: none;
   }  
 }
-#element { 
-  position: relative;  /* optional */
-  width: 100px;
-  height: 100px;
-  background-color: blue;
-}
-
-#element::after {
-  content: "";
-  width: 150px;
-  height: 150px;
-  background-color: red;
-
-  /* create a new stacking context */
-  position: absolute;
-  z-index: -1;  /* to be below the parent element */
-}

@@ -3,7 +3,7 @@
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 	align-items: center;
-	justify-content:space-evenly;
+	justify-content: space-evenly;
 
 	background-color: rgb(235, 239, 241);
 }
@@ -11,7 +11,7 @@
 #project-header-text {
 	display: flex;
 	flex-direction: column;
-	justify-content:end;
+	justify-content: end;
 	gap: 1rem;
 }
 
@@ -22,17 +22,19 @@
 
 #project-header-img {
 	border-radius: 2rem;
+	object-fit: contain;
 	overflow: hidden;
 	max-width: 100%;
 	aspect-ratio: 1/1;
 }
 
-@media screen and (max-width: 800px) {
-  .project-header {
-    flex-direction: column;
+@media screen and (max-width: 600px) {
+	#project-header {
+		flex-direction: column-reverse;
 		gap: 3rem;
-  }
-	.project-header-img {
+	}
+
+	#project-header-img {
 		max-width: 50%;
 	}
 }
