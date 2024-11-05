@@ -29,7 +29,7 @@
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 20px;
-  background-color: #d2d2d2;
+  background-color: rgba(235, 235, 235, 0.5);
 }
 
 .card-content {
@@ -38,6 +38,9 @@
   gap: 1rem;
   white-space: pre-wrap;
   padding: 1rem;
+  /* border-radius: 20px;
+  border: 2px solid #b3b3b3; */
+  /* background-color: #ffffff; */
 }
 
 .card-title {
