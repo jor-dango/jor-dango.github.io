@@ -9,6 +9,7 @@ import './hero.css'
 
 import { useAtom } from 'jotai'
 import { counter } from '../../utils/atoms'
+import { DockDemo } from '../../components/DockDemo'
 
 function Hero() {
   const loaderRef = useRef<HTMLDivElement>(null);
@@ -105,8 +106,10 @@ function Hero() {
           </div>
         </a>
         <button onClick={() => {setCounter(count + 1)}}>Click</button>
+      <DockDemo/>
+        
       </section>
-    </div >
+    </div>
   )
 }
 
