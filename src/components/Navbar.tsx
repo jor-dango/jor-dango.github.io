@@ -5,7 +5,12 @@ import { useNavigate } from 'react-router-dom'
 import { useRef } from 'react';
 import resume from '../assets/Jordan Tan Resume.pdf'
 
+import { useAtom } from 'jotai';
+import { counter } from '../utils/atoms';
+
 function Navbar() {
+
+	const [count, setCounter] = useAtom(counter);
 
 	const navRef = useRef<HTMLDivElement>(null);
 	const navigate = useNavigate();
@@ -31,6 +36,7 @@ function Navbar() {
 						<p className="other-link">Resume</p>
 					</a>
 				</div>
+				<p>{count}</p>
 			</div>
 		</div>
 	)

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import fontWeights from '../../utils/constants'
 import { sleep, fade_in, fade_out } from '../../utils/helperFuncs'
@@ -7,12 +7,17 @@ import '../../utils/fonts.css'
 import '../../utils/init.css'
 import './hero.css'
 
+import { useAtom } from 'jotai'
+import { counter } from '../../utils/atoms'
+
 function Hero() {
   const loaderRef = useRef<HTMLDivElement>(null);
   const initBGRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
 
   const navigate = useNavigate();
+
+  const [count, setCounter] = useAtom(counter);
 
   // const [hasVisited, setHasVisited] = useState(false);
 
@@ -99,6 +104,7 @@ function Hero() {
             </h3>
           </div>
         </a>
+        <button onClick={() => {setCounter(count + 1)}}>Click</button>
       </section>
     </div >
   )
