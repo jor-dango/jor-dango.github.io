@@ -7,6 +7,7 @@ import Projects from './pages/Projects/Projects'
 import DineOutBuddy from './pages/DineOutBuddy/DineOutBuddy';
 import Navbar from './components/Navbar';
 import Placeholder from './pages/Placeholder';
+import NotFound from './pages/NotFound';
 // import AllProjects from './pages/AllProjects';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route path="projects" element={<Projects />} />
           <Route path="projects/dineoutbuddy" element={<DineOutBuddy />} />
           <Route path="projects/*" element={<Placeholder />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
